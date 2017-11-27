@@ -24,7 +24,7 @@ jobs:
         - bash <(curl -s https://codecov.io/bash)
     - stage: release
       script:
-        - npm run semantic-release
+        - npm run release
       after_sucess: skip
 
 stages:

@@ -1,6 +1,6 @@
 {
   "name": "jest-runner-tslint",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "TSLint runner for Jest",
   "main": "dist/index.js",
   "repository": "https://github.com/keplersj/jest-runner-tslint",
@@ -14,10 +14,14 @@
     "test": "jest -c jest-tslint.config.js",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "precommit": "lint-staged",
-    "semantic-release": "semantic-release"
+    "prerelease": "tsc",
+    "release": "semantic-release"
   },
   "lint-staged": {
     "*": ["jest --bail --findRelatedTests"]
+  },
+  "release": {
+    "verifyConditions": "@semantic-release/github"
   },
   "devDependencies": {
     "@commitlint/cli": "^5.1.1",
@@ -27,7 +31,7 @@
     "jest": "^21.2.1",
     "lint-staged": "^5.0.0",
     "prettier": "^1.8.2",
-    "semantic-release": "^8.2.0",
+    "semantic-release": "11",
     "ts-jest": "^21.2.3",
     "tslint-config-prettier": "^1.6.0",
     "tslint-plugin-prettier": "^1.3.0",
