@@ -1,13 +1,15 @@
 {
   "name": "jest-runner-tslint",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "TSLint runner for Jest",
   "main": "dist/index.js",
   "repository": "https://github.com/keplersj/jest-runner-tslint",
   "author": "Kepler Sticka-Jones <kepler@stickajones.org>",
   "license": "MIT",
   "private": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "pretest": "tsc",
@@ -18,7 +20,9 @@
     "release": "semantic-release"
   },
   "lint-staged": {
-    "*": ["jest --bail --findRelatedTests"]
+    "*": [
+      "jest --bail --findRelatedTests"
+    ]
   },
   "release": {
     "verifyConditions": "@semantic-release/github"
