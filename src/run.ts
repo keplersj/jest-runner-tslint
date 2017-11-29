@@ -20,8 +20,8 @@ module.exports = ({ testPath, config, globalConfig }) => {
     console: null,
     displayName: "TSLint",
     failureMessage: result.failures.length && result.output,
-    numFailingTests: result.failures.length,
-    numPassingTests: result.failures.length ? 0 : 1,
+    numFailingTests: result.errorCount,
+    numPassingTests: result.errorCount ? 0 : 1,
     numPendingTests: 0,
     perfStats: {
       end,
