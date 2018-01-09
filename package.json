@@ -28,7 +28,7 @@
     "@commitlint/config-conventional": "5.2.3",
     "@types/node": "8.5.5",
     "husky": "0.14.3",
-    "jest": "22.0.4",
+    "jest": "22.0.5",
     "lint-staged": "6.0.0",
     "prettier": "1.9.2",
     "semantic-release": "11.0.2",
