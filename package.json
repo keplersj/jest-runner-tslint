@@ -23,6 +23,11 @@
   "release": {
     "verifyConditions": "@semantic-release/github"
   },
+  "jest-runner-tslint": {
+    "cliOptions": {
+      "fix": true
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "6.0.2",
     "@commitlint/config-conventional": "6.0.2",
@@ -38,6 +43,7 @@
     "typescript": "2.6.2"
   },
   "dependencies": {
+    "cosmiconfig": "^3.1.0",
     "create-jest-runner": "^0.1.1",
     "tslint": "^5.8.0"
   }
