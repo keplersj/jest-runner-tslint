@@ -54,3 +54,43 @@ module.exports = {
 ```bash
 yarn jest
 ```
+
+## Options
+
+This project uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig), so you can provide config via:
+* a `jest-runner-tslint` property in your `package.json`
+* a `jest-runner-tslint.config.js` JS file
+* a `.jest-runner-tslintrc` JSON file
+
+
+In `package.json`
+```json
+{
+  "jest-runner-tslint": {
+    "cliOptions": {
+      // Options here
+    }
+  }
+}
+```
+
+or in `jest-runner-tslint.config.js`
+```js
+module.exports = {
+  cliOptions: {
+    // Options here
+  }
+}
+```
+
+
+### cliOptions
+
+jest-runner-tslint maps a lot of ESLint CLI arguments to config options. For example `--fix` is `cliOptions.fix`
+
+| option              | default     | example                                                                                     |
+|---------------------|-------------|---------------------------------------------------------------------------------------------|
+| fix                 | `false`     | `"fix": true`                                                                               |
+| formatter           | `"stylish"` | `"formatter": "tap"`                                                                        |
+| formattersDirectory | `null`      | `"formattersDirectory": "node_modules/custom-tslint-formatters/formatters"`                 |
+| rulesDirectory      | `null`      | `"rulesDirectory": "path/to/rules" or "rulesDirectory": ["path/to/rules", "path/to/other"]` |

@@ -1,12 +1,10 @@
 import * as fs from "fs";
 import { Configuration, Linter } from "tslint";
+import { getTslintOptions } from "./utils/normalizeConfig";
 
 module.exports = ({ testPath, config, globalConfig }) => {
   const start = Date.now();
-  const options = {
-    fix: false,
-    formatter: "stylish"
-  };
+  const options = getTslintOptions(config);
 
   const fileContents = fs.readFileSync(testPath, "utf8");
   const linter = new Linter(options);
