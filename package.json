@@ -29,7 +29,7 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "6.1.0",
+    "@commitlint/cli": "6.1.2",
     "@commitlint/config-conventional": "6.1.0",
     "@types/node": "9.4.6",
     "husky": "0.14.3",
