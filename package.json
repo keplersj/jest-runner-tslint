@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "cosmiconfig": "^4.0.0",
-    "create-jest-runner": "^0.2.0",
+    "create-jest-runner": "^0.3.0",
     "tslint": "^5.8.0"
   }
 }
