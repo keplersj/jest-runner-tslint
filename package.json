@@ -34,7 +34,7 @@
     "@types/node": "9.6.55",
     "husky": "0.14.3",
     "jest": "22.4.4",
-    "lint-staged": "7.3.0",
+    "lint-staged": "9.4.3",
     "prettier": "1.19.0",
     "semantic-release": "12.4.1",
     "ts-jest": "22.4.6",
