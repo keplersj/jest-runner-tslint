@@ -14,16 +14,12 @@
     "build": "tsc",
     "pretest": "tsc",
     "test": "jest -c jest-tslint.config.js",
-    "prerelease": "tsc",
-    "release": "semantic-release"
+    "prerelease": "tsc"
   },
   "lint-staged": {
     "*": [
       "jest --bail --findRelatedTests"
     ]
-  },
-  "release": {
-    "verifyConditions": "@semantic-release/github"
   },
   "jest-runner-tslint": {
     "cliOptions": {
