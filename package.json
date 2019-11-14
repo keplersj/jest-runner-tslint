@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc",
     "pretest": "tsc",
-    "test": "jest -c jest-tslint.config.js",
+    "test": "jest",
     "prerelease": "tsc"
   },
   "lint-staged": {
@@ -50,5 +50,30 @@
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "lint:tslint",
+        "moduleFileExtensions": [
+          "ts",
+          "js"
+        ],
+        "runner": "./dist/index.js",
+        "testMatch": [
+          "**/*.ts",
+          "**/*.js"
+        ],
+        "testPathIgnorePatterns": [
+          "/node_modules/",
+          "/dist/"
+        ]
+      }
+    ]
   }
 }
