@@ -4,9 +4,6 @@ node_js:
   - "node"
   - "lts/*"
 
-install:
-  - yarn
-
 cache:
   directories:
     - "node_modules"
@@ -14,7 +11,7 @@ cache:
 
 notifications:
   email: false
-  
+
 jobs:
   include:
     - stage: test
