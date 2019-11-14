@@ -7,7 +7,9 @@ module.exports = ({ testPath, config, globalConfig }) => {
   const options = getTslintOptions(config);
 
   const fileContents = fs.readFileSync(testPath, "utf8");
-  const linter = new Linter(options);
+  const program = Linter.createProgram("tsconfig.json", config.rootDir);
+
+  const linter = new Linter(options, program);
   const configuration = Configuration.findConfiguration(null, testPath).results;
   linter.lint(testPath, fileContents, configuration);
   const result = linter.getResult();
