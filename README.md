@@ -31,7 +31,7 @@ npm install --save-dev jest jest-runner-tslint
 
 #### Using Built-in Preset
 
-This package includes a [Jest preset](https://jestjs.io/docs/en/configuration#preset-string) which configures Jest to run Prettier on all files supported by Prettier. To use it set the following in your `package.json`:
+This package includes a [Jest preset](https://jestjs.io/docs/en/configuration#preset-string) which configures Jest to run TSLint on all files supported by TSLint. To use it set the following in your `package.json`:
 
 ```json
 {
