@@ -29,14 +29,36 @@ npm install --save-dev jest jest-runner-tslint
 
 ### Add it to your Jest config
 
+#### Using Built-in Preset
+
+This package includes a [Jest preset](https://jestjs.io/docs/en/configuration#preset-string) which configures Jest to run Prettier on all files supported by Prettier. To use it set the following in your `package.json`:
+
+```json
+{
+  "jest": {
+    "preset": "jest-runner-prettier"
+  }
+}
+```
+
+or `jest.config.js`:
+
+```js
+module.exports = {
+  preset: "jest-runner-prettier"
+};
+```
+
+#### Manually
+
 In your `package.json`
 
 ```json
 {
   "jest": {
-    "runner": "jest-runner-tslint",
-    "moduleFileExtensions": ["ts"],
-    "testMatch": ["**/*.ts"]
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
+    "runner": "tslint",
+    "testMatch": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "**/*.js", "**/*.jsx"]
   }
 }
 ```
@@ -45,9 +67,9 @@ Or in `jest.config.js`
 
 ```js
 module.exports = {
-  runner: "jest-runner-tslint",
-  moduleFileExtensions: ["ts"],
-  testMatch: ["**/*.ts"]
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
+  runner: "tslint",
+  testMatch: ["**/*.ts", "**/*.tsx", "**/*.d.ts", "**/*.js", "**/*.jsx"]
 };
 ```
 

@@ -5,7 +5,7 @@
     "tslint-config-prettier",
     "tslint-plugin-prettier"
   ],
-  "jsRules": {},
+  "jsRules": true,
   "rules": {
     "prettier": true
   },

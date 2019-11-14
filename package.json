@@ -61,15 +61,8 @@
     "projects": [
       {
         "displayName": "lint:tslint",
-        "moduleFileExtensions": [
-          "ts",
-          "js"
-        ],
+        "preset": "./jest-preset.js",
         "runner": "./dist/index.js",
-        "testMatch": [
-          "**/*.ts",
-          "**/*.js"
-        ],
         "testPathIgnorePatterns": [
           "/node_modules/",
           "/dist/"
