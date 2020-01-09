@@ -30,7 +30,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@types/node": "^12.12.7",
-    "husky": "^3.0.9",
+    "husky": "^4.0.4",
     "jest": "^24.9.0",
     "jest-runner-prettier": "^0.3.2",
     "lint-staged": "^9.4.3",
