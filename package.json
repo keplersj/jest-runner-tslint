@@ -35,7 +35,7 @@
     "jest-runner-prettier": "^0.3.2",
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
-    "semantic-release": "^15.13.30",
+    "semantic-release": "^16.0.2",
     "ts-jest": "^24.1.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
