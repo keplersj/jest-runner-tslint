@@ -23,7 +23,9 @@ describe("TSLint Jest Runner", () => {
         config: { rootDir: path.join(__dirname, "__fixtures__") }
       });
 
-      expect(result).toMatchSnapshot();
+      expect(result).toMatchSnapshot({
+        failureMessage: expect.any(String)
+      });
     });
   });
 

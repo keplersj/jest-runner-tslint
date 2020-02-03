@@ -4,9 +4,7 @@ exports[`TSLint Jest Runner failing fixture matches snapshot 1`] = `
 Object {
   "console": null,
   "displayName": "TSLint",
-  "failureMessage": "/home/kepler/Code/keplersj/jest-runner-tslint/src/__fixtures__/bad.ts[8m:3:5[28m
-[31mERROR: 3:5[39m  [90mno-console[39m  [33mCalls to 'console.log' are not allowed.[39m
-",
+  "failureMessage": Any<String>,
   "leaks": false,
   "numFailingTests": 1,
   "numPassingTests": 0,
