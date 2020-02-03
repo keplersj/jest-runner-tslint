@@ -1,8 +1,9 @@
 import * as fs from "fs";
 import { Configuration, Linter } from "tslint";
 import { getTslintOptions } from "./utils/normalize-config";
+import { TestResult } from "@jest/test-result";
 
-module.exports = ({ testPath, config }) => {
+export default ({ testPath, config }): TestResult => {
   const start = Date.now();
   const options = getTslintOptions(config);
 
@@ -33,9 +34,13 @@ module.exports = ({ testPath, config }) => {
       fileDeleted: false,
       matched: 0,
       unchecked: 0,
+      uncheckedKeys: [],
       unmatched: 0,
       updated: 0
     },
+    leaks: false,
+    numTodoTests: 0,
+    openHandles: [],
     sourceMaps: {},
     testExecError: null,
     testFilePath: testPath,

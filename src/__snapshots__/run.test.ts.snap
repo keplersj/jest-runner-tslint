@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TSLint Jest Runner failing fixture matches snapshot 1`] = `
+Object {
+  "console": null,
+  "displayName": "TSLint",
+  "failureMessage": "/home/kepler/Code/keplersj/jest-runner-tslint/src/__fixtures__/bad.ts[8m:3:5[28m
+[31mERROR: 3:5[39m  [90mno-console[39m  [33mCalls to 'console.log' are not allowed.[39m
+",
+  "leaks": false,
+  "numFailingTests": 1,
+  "numPassingTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "openHandles": Array [],
+  "skipped": false,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "uncheckedKeys": Array [],
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "sourceMaps": Object {},
+  "testExecError": null,
+  "testResults": Array [
+    Object {
+      "ancestorTitles": Array [],
+      "failureMessages": Array [
+        "Calls to 'console.log' are not allowed.",
+      ],
+      "fullName": undefined,
+      "location": Object {
+        "column": 4,
+        "line": 2,
+      },
+      "numPassingAsserts": 0,
+      "status": "failed",
+      "title": "Calls to 'console.log' are not allowed.",
+    },
+  ],
+}
+`;
+
+exports[`TSLint Jest Runner passing fixture matches snapshot 1`] = `
+Object {
+  "console": null,
+  "displayName": "TSLint",
+  "failureMessage": 0,
+  "leaks": false,
+  "numFailingTests": 0,
+  "numPassingTests": 1,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "openHandles": Array [],
+  "skipped": false,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "uncheckedKeys": Array [],
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "sourceMaps": Object {},
+  "testExecError": null,
+  "testResults": Array [
+    Object {
+      "ancestorTitles": Array [],
+      "failureMessages": Array [],
+      "fullName": undefined,
+      "location": undefined,
+      "numPassingAsserts": 1,
+      "status": "passed",
+      "title": "",
+    },
+  ],
+}
+`;
