@@ -1,8 +1,8 @@
 import * as fs from "fs";
 import { Configuration, Linter } from "tslint";
-import { getTslintOptions } from "./utils/normalizeConfig";
+import { getTslintOptions } from "./utils/normalize-config";
 
-module.exports = ({ testPath, config, globalConfig }) => {
+module.exports = ({ testPath, config }) => {
   const start = Date.now();
   const options = getTslintOptions(config);
 

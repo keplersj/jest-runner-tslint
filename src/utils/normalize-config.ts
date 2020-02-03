@@ -1,10 +1,21 @@
 import { cosmiconfigSync as cosmiconfig } from "cosmiconfig";
 import { ILinterOptions } from "tslint";
 
+const BASE_CONFIG: ILinterOptions = {
+  fix: false,
+  formatter: "stylish"
+};
+
 const explorer = cosmiconfig("jest-runner-tslint");
 
-export function getTslintOptions(config) {
-  const result: ICosmiconfigOptions | undefined = explorer.search(
+interface CosmiconfigOptions {
+  config: {
+    cliOptions: ILinterOptions;
+  };
+}
+
+export function getTslintOptions(config): ILinterOptions {
+  const result: CosmiconfigOptions | undefined = explorer.search(
     config.rootDir
   );
   if (result) {
@@ -12,15 +23,4 @@ export function getTslintOptions(config) {
   } else {
     return BASE_CONFIG;
   }
-}
-
-const BASE_CONFIG: ILinterOptions = {
-  fix: false,
-  formatter: "stylish"
-};
-
-interface ICosmiconfigOptions {
-  config: {
-    cliOptions: ILinterOptions;
-  };
 }
