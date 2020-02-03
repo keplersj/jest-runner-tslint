@@ -36,7 +36,7 @@ This package includes a [Jest preset](https://jestjs.io/docs/en/configuration#pr
 ```json
 {
   "jest": {
-    "preset": "jest-runner-prettier"
+    "preset": "jest-runner-tslint"
   }
 }
 ```
@@ -45,7 +45,7 @@ or `jest.config.js`:
 
 ```js
 module.exports = {
-  preset: "jest-runner-prettier"
+  preset: "jest-runner-tslint"
 };
 ```
 
