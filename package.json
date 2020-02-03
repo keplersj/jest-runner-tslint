@@ -30,7 +30,7 @@
     "jest": "^24.9.0",
     "jest-runner-eslint": "^0.7.6",
     "jest-runner-prettier": "^0.3.2",
-    "lint-staged": "^9.4.3",
+    "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "semantic-release": "^15.13.30",
     "ts-jest": "^24.1.0",
