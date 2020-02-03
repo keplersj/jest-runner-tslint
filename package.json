@@ -35,14 +35,17 @@
     "prettier": "^1.19.1",
     "semantic-release": "^17.0.2",
     "ts-jest": "^25.1.0",
+    "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.7.2"
   },
   "dependencies": {
     "cosmiconfig": "^6.0.0",
-    "create-jest-runner": "^0.5.0",
-    "tslint": "^5.8.0"
+    "create-jest-runner": "^0.5.0"
+  },
+  "peerDependencies": {
+    "tslint": "*"
   },
   "husky": {
     "hooks": {

@@ -16,14 +16,14 @@ For more information on the industry-wide transition from TSLint to ESLint, plea
 
 ### Install
 
-Install `jest`_(it needs Jest 21+)_ and `jest-runner-tslint`
+Install `tslint`, `jest`_(it needs Jest 21+)_, and `jest-runner-tslint`
 
 ```bash
-yarn add --dev jest jest-runner-tslint
+yarn add --dev tslint jest jest-runner-tslint
 
 # or with NPM
 
-npm install --save-dev jest jest-runner-tslint
+npm install --save-dev tslint jest jest-runner-tslint
 
 ```
 
