@@ -15,6 +15,10 @@ expect.addSnapshotSerializer({
     value && value.perfStats && value.testFilePath && value.testResults
 });
 
+beforeAll(() => {
+  process.env["FORCE_COLOR"] = "true";
+});
+
 describe("TSLint Jest Runner", () => {
   describe("failing fixture", () => {
     it("matches snapshot", () => {
