@@ -1,19 +1,7 @@
+Date.now = jest.fn(() => 1482363367071);
+
 import * as path from "path";
 import run from "./run";
-
-// Remove undeterministic data from test reports
-expect.addSnapshotSerializer({
-  print: (value, serialize) => {
-    delete value.perfStats;
-    delete value.testFilePath;
-    value.testResults.forEach(result => {
-      delete result.duration;
-    });
-    return serialize(value);
-  },
-  test: value =>
-    value && value.perfStats && value.testFilePath && value.testResults
-});
 
 describe("TSLint Jest Runner", () => {
   describe("failing fixture", () => {
@@ -24,7 +12,9 @@ describe("TSLint Jest Runner", () => {
       });
 
       expect(result).toMatchSnapshot({
-        failureMessage: expect.any(String)
+        failureMessage: expect.any(String),
+        perfStats: expect.any(Object),
+        testFilePath: expect.any(String)
       });
     });
   });
@@ -36,7 +26,10 @@ describe("TSLint Jest Runner", () => {
         config: { rootDir: path.join(__dirname, "__fixtures__") }
       });
 
-      expect(result).toMatchSnapshot();
+      expect(result).toMatchSnapshot({
+        perfStats: expect.any(Object),
+        testFilePath: expect.any(String)
+      });
     });
   });
 });
