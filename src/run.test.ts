@@ -8,13 +8,13 @@ describe("TSLint Jest Runner", () => {
     it("matches snapshot", () => {
       const result = run({
         testPath: path.join(__dirname, "__fixtures__", "bad.ts"),
-        config: { rootDir: path.join(__dirname, "__fixtures__") }
+        config: { rootDir: path.join(__dirname, "__fixtures__") },
       });
 
       expect(result).toMatchSnapshot({
         failureMessage: expect.any(String),
         perfStats: expect.any(Object),
-        testFilePath: expect.any(String)
+        testFilePath: expect.any(String),
       });
     });
   });
@@ -23,12 +23,12 @@ describe("TSLint Jest Runner", () => {
     it("matches snapshot", () => {
       const result = run({
         testPath: path.join(__dirname, "__fixtures__", "good.ts"),
-        config: { rootDir: path.join(__dirname, "__fixtures__") }
+        config: { rootDir: path.join(__dirname, "__fixtures__") },
       });
 
       expect(result).toMatchSnapshot({
         perfStats: expect.any(Object),
-        testFilePath: expect.any(String)
+        testFilePath: expect.any(String),
       });
     });
   });

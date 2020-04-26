@@ -3,7 +3,7 @@ import { ILinterOptions } from "tslint";
 
 const BASE_CONFIG: ILinterOptions = {
   fix: false,
-  formatter: "stylish"
+  formatter: "stylish",
 };
 
 const explorer = cosmiconfig("jest-runner-tslint");

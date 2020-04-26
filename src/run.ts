@@ -26,7 +26,7 @@ export default ({ testPath, config }): TestResult => {
     numPendingTests: 0,
     perfStats: {
       end,
-      start
+      start,
     },
     skipped: false,
     snapshot: {
@@ -36,7 +36,7 @@ export default ({ testPath, config }): TestResult => {
       unchecked: 0,
       uncheckedKeys: [],
       unmatched: 0,
-      updated: 0
+      updated: 0,
     },
     leaks: false,
     numTodoTests: 0,
@@ -46,7 +46,7 @@ export default ({ testPath, config }): TestResult => {
     testFilePath: testPath,
     testResults:
       result.failures.length !== 0
-        ? result.failures.map(failure => ({
+        ? result.failures.map((failure) => ({
             ancestorTitles: [],
             duration: end - start,
             failureMessages: [failure.getFailure()],
@@ -54,11 +54,11 @@ export default ({ testPath, config }): TestResult => {
             location: {
               column: failure.getStartPosition().getLineAndCharacter()
                 .character,
-              line: failure.getStartPosition().getLineAndCharacter().line
+              line: failure.getStartPosition().getLineAndCharacter().line,
             },
             numPassingAsserts: 0,
             status: "failed",
-            title: failure.getFailure()
+            title: failure.getFailure(),
           }))
         : [
             {
@@ -69,8 +69,8 @@ export default ({ testPath, config }): TestResult => {
               location: undefined,
               numPassingAsserts: 1,
               status: "passed",
-              title: ""
-            }
-          ]
+              title: "",
+            },
+          ],
   };
 };
