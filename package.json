@@ -41,7 +41,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "cosmiconfig": "^6.0.0",
+    "cosmiconfig": "^7.0.0",
     "create-jest-runner": "^0.6.0"
   },
   "peerDependencies": {
